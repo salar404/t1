@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+.breadcrumb {
+    background-color: white;
+}
+
+p {
+    color: #202529;
+    font-family: "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 10.5pt;
+    margin: 0pt;
+}
+
+p a {
+    color: #007BFF;
+    font-family: "Segoe UI Semibold", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 16pt;
+}
+select{
+    width: 100%;
+    margin-top: 10px;
+}
+.size{
+    font-weight: bold;
+    font-size: 12.5pt;
+}
+label{
+font-weight: bold;
+font-size:large;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Data Setup</li>
+                <li class="breadcrumb-item active" aria-current="page">Student Enrollment</li>
+            </ol>
+        </nav>
+        <p><a href="#">View All Students</a></p>
+        <h2>Student Enrollment</h2>
+        <form>
+            <div class="mb-3">
+                <label for="faculty_id" class="form-label size" style="color: #F00;">
+                    Faculty ID:
+                </label>
+                <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="faculty_id"
+                    name="faculty_id">
+                    <option selected>Choose Faculty</option>
+                    <option value="1">Faculty of Science</option>
+                    <option value="3">Faculty of Arts</option>
+                </select>
+            </div>
+           
+            <div class="mb-3">
+                <label for="department_id" class="form-label size" style="color:  #008000;">
+                    Department ID:
+                </label>
+                <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="department_id" name="department_id">
+                    <option selected>Choose Department</option>
+                    <option value="1">Department of Computer Science</option>
+                    <option value="2">Department of Social Science</option>
+                </select>
+            </div>
+           
+            <div class="mb-3">
+                <label for="program_id" class="form-label size" style="color:  #00F;">
+                    Program ID:
+                </label>
+                <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="program_id" name="program_id">
+                    <option selected>Choose Program</option>
+                    <option value="1">BS (4-Year) Computer Science</option>
+                    <option value="3">BS (4-Year) Computer Science Evening</option>
+                    <option value="4">MCS Computer Science Morning</option>
+                    <option value="5">MCS Computer Science Evening</option>
+                    <option value="6">MS Computer Science Evening</option>
+                    <option value="7">PhD Computer Science Morning</option>
+                    <option value="8">PhD Computer Science Evening</option>
+                </select>
+            </div>
+           
+            <div>
+                <label for="semester_no" class="form-label size" style="color:  #00F;">
+                    Semester No:
+                </label>
+                <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="semester_no" name="semester_no">
+                    <option selected>Choose Semester</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div>
+                <label for="session_year" class="form-label size" style="color:  #FFA500;">
+                    Session (Start Year):
+                </label>
+                <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="session_year" name="session_year">
+                    <option selected>Choose Session</option>
+                    <option value="1">2021</option>
+                    <option value="2">2022</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="student_name" class="form-label">Student Name:</label>
+                <input type="text" class="form-control" id="student_name" name="student_name"
+                    placeholder="Enter Student Name">
+            </div>
+            <div class="mb-3">
+                <label for="student_fname" class="form-label">Father Name</label>
+                <input type="text" class="form-control" id="student_fname" name="student_fname"
+                    placeholder="Enter Father Name">
+            </div>
+            <div class="mb-3">
+                Gender: &nbsp; <input type="radio" name="gender" value="male"> Male
+                &nbsp; <input type="radio" name="gender" value="female"> Female
+                &nbsp; <input type="radio" name="gender" value="other"> Other
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="cnic" class="form-label">CNIC:
+                    <sub> e.g., 12345-6789012-3:</sub>
+                </label>
+                <input type="text" class="form-control" id="cnic" name="cnic" placeholder="Enter  CNIC">
+            </div>
+
+            <div class="mb-3">
+                <label for="roll_no" class="form-label">Roll No:</label>
+                <input type="text" class="form-control" id="roll_no" name="roll_no" placeholder="Enter Roll No">
+            </div>
+            <div class="mb-3">
+                <label for="reg_no" class="form-label">Registration No:</label>
+                <input type="text" class="form-control" id="reg_no" name="reg_no" placeholder="Enter Registration No">
+            </div>
+            <div class="mb-3">
+                <label for="qouta_id" class="form-label size" style="color:  #F00;">
+                    Student Qouta:
+                </label>
+                <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="qouta_id" name="qouta_id">
+                    <option selected>Choose Qouta</option>
+                    <option value="1">Open Merit</option>
+                    <option value="2">Son/Daughter of BZU Employees</option>
+                    <option value="3">Son/Daughter of BZU Teachers</option>
+                    <option value="4">Disabled Candidates</option>
+                    <option value="5">Sports Seat</option>
+                    <option value="6">Son/Daughter of BZU Officers</option>
+                    <option value="7">Seats for Foreign Candidates</option>
+                    <option value="8">Son/Daughter of Registered Pharmacists</option>
+                    <option value="9">Seats for Pharmaceutical Industry</option>
+                    <option value="10">Son/Daughter of Veterinarian/AH Graduate</option>
+                    <option value="11">Son/Daughter of Veterinary Assistant</option>
+                    <option value="12">Son/Daughter of Advocate</option>
+                    <option value="13">Serving University Employee of BZU</option>
+                    <option value="14">Serving University Officers of BZU</option>
+                    <option value="15">Spouse of University Employee/Officer/Teacher</option>
+                    <option value="16">Seats for Student of Afghanistan</option>
+                    <option value="17">Seats for Foreign Candidates Purely Under PTAP</option>
+                    <option value="18">Seats for Nominees from Azad Kashmir</option>
+                    <option value="19">Seats for Nominees of Baluchistan</option>
+                    <option value="20">Seats for Nominees of FATA</option>
+                    <option value="21">Seats for Overseas Pakistan Candidates/Children</option>
+                    <option value="22">Seats for Real Son/Daughter of Punjab Police Shuhadaa Nominated by IG Punjab
+                        Police</option>
+                    <option value="23">Seats for Children of Shaheed/War Disabled/Retired/Working Defense Personnel
+                    </option>
+                    <option value="24">Seats for OIC States</option>
+                    <option value="25">Seats for the Tribal Areas of DG Khan Division</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Add New Student</button>
+        </form>
+
+
+
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (required for some Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
